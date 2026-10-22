@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..700&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Caveat:wght@600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+
+  /* Natural Cream Light Mode Theme (Default) */
+  --bg-main: #f5f2eb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #eae5d9;
+  --bg-panel: rgba(255, 255, 255, 0.85);
+  --border-main: #e2dcd0;
+  --text-main: #231f1c;
+  --text-sub: #635c56;
+  --accent-blue: #4a85c6;
+  --accent-blue-hover: #3a72b0;
+  --accent-cream: #efeae0;
+}
+
+.dark {
+  /* Elegant Dark Roast Theme */
+  --bg-main: #141311;
+  --bg-card: #1c1a17;
+  --bg-card-hover: #26231f;
+  --bg-panel: rgba(28, 26, 23, 0.85);
+  --border-main: #2e2a25;
+  --text-main: #f5f2eb;
+  --text-sub: #a39b91;
+  --accent-blue: #5a9ae6;
+  --accent-blue-hover: #4a88d4;
+  --accent-cream: #1e1b18;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+/* Custom Typography Classes inspired by the uploaded design */
+.font-display {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-serif-italic {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Natural Card & Glass Styles */
+.natural-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-main);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.natural-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px -10px rgba(74, 133, 198, 0.15);
+}
+
+.natural-panel {
+  background-color: var(--bg-panel);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-main);
+}
+
+/* Soft Sky Blue Accents */
+.text-accent-blue {
+  color: var(--accent-blue);
+}
+
+.bg-accent-blue {
+  background-color: var(--accent-blue);
+}
+
+.border-accent-blue {
+  border-color: var(--accent-blue);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-main);
+  border-radius: 5px;
+  border: 2px solid var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
